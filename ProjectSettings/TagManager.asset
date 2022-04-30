@@ -41,3 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: NumbersBlack
+    uniqueID: 2764943573
+    locked: 0
+  - name: Numbers
+    uniqueID: 3116048591
+    locked: 0
