@@ -47,3 +47,12 @@ TagManager:
   - name: Numbers
     uniqueID: 3116048591
     locked: 0
+  - name: Tangram_empty
+    uniqueID: 2793356509
+    locked: 0
+  - name: Tangram_filled
+    uniqueID: 870872633
+    locked: 0
+  - name: Tangram_selected
+    uniqueID: 61086063
+    locked: 0

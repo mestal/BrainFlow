@@ -5,16 +5,14 @@ using UnityEngine;
 public class MainControl : MonoBehaviour
 {
     public GameObject activeShape;
-    // Start is called before the first frame update
+    public int shapeNumber;
+    public int shapePoint;
+
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        shapeNumber = 0;
+        shapePoint = 0;
+        NextShape.SetNextShape();
     }
 
     private void OnMouseDown()
