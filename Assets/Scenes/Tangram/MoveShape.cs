@@ -45,11 +45,13 @@ public class MoveShape : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if(GameObject.Find("rotateButton").GetComponent<MainControl>().activeShape != null) { 
-            GameObject.Find("rotateButton").GetComponent<MainControl>().activeShape.GetComponent<SpriteRenderer>().sprite =
+            if (GameObject.Find("rotateButton").GetComponent<MainControl>().activeShape != null)
+            {
+                GameObject.Find("rotateButton").GetComponent<MainControl>().activeShape.GetComponent<SpriteRenderer>().sprite =
                     GameObject.Find("rotateButton").GetComponent<MainControl>().activeShape.GetComponent<MoveShape>().imageDefault;
             }
 
+            GameObject.Find("rotateButton").GetComponent<PlaySounds>().Selected();
             GameObject.Find("rotateButton").GetComponent<MainControl>().activeShape = this.gameObject;
 
             Vector3 mousePos;
@@ -70,8 +72,9 @@ public class MoveShape : MonoBehaviour
     {
         moving = false;
         GetComponent<SpriteRenderer>().sortingLayerName = "Tangram_filled";
-        foreach (var correctForm in correctForms) { 
-            if (Mathf.Abs(this.transform.localPosition.x - correctForm.transform.localPosition.x) <= 0.5f 
+        foreach (var correctForm in correctForms)
+        {
+            if (Mathf.Abs(this.transform.localPosition.x - correctForm.transform.localPosition.x) <= 0.5f
                 && Mathf.Abs(this.transform.localPosition.y - correctForm.transform.localPosition.y) <= 0.5f
                 && correctForm.GetComponent<ShapeProperties>().rotation.Contains(this.rotation))
             {
@@ -80,16 +83,34 @@ public class MoveShape : MonoBehaviour
                 GameObject.Find("rotateButton").GetComponent<MainControl>().activeShape = null;
                 GetComponent<SpriteRenderer>().sprite = imageDefault;
                 GameObject.Find("rotateButton").GetComponent<MainControl>().shapePoint++;
-                if(GameObject.Find("rotateButton").GetComponent<MainControl>().shapePoint == 7)
+                if (GameObject.Find("rotateButton").GetComponent<MainControl>().shapePoint == 7)
                 {
                     GameObject.Find("rotateButton").GetComponent<MainControl>().shapePoint = 0;
-                    NextShape.SetNextShape();
+                    GameObject.Find("rotateButton").GetComponent<PlaySounds>().Congrats();
+                    Invoke("NextShapeCall", 4f);
+
+                }
+                else
+                {
+                    GameObject.Find("rotateButton").GetComponent<PlaySounds>().CorrectMove();
                 }
                 return;
             }
         }
-        
+
+        if (Mathf.Abs(this.transform.localPosition.x - resetPosition.x) > 0.5f ||
+            Mathf.Abs(this.transform.localPosition.y - resetPosition.y) > 0.5f ||
+            Mathf.Abs(this.transform.localPosition.z - resetPosition.z) > 0.5f)
+        {
+            GameObject.Find("rotateButton").GetComponent<PlaySounds>().WrongMove();
+        }
+
         this.transform.localPosition = new Vector3(resetPosition.x, resetPosition.y, resetPosition.z);
 
+    }
+
+    void NextShapeCall()
+    {
+        NextShape.SetNextShape();
     }
 }

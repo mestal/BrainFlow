@@ -21,6 +21,7 @@ public class MainControl : MonoBehaviour
         {
             if(activeShape != null)
             {
+                GameObject.Find("rotateButton").GetComponent<PlaySounds>().Rotate();
                 activeShape.transform.Rotate(0, 0, -45);
                 if(activeShape.GetComponent<MoveShape>().rotation == 8)
                 {

@@ -262,37 +262,37 @@ public class NextShape : MonoBehaviour
             GameObject.Find("06 - triangle2_empty - 2").GetComponent<ShapeProperties>().rotation = new List<int>() { 6, 7 };
         }
 
-        GameObject.Find("02 - square_filled").transform.position = new Vector3(-9.349502f, -2.974842f, 0);
+        GameObject.Find("02 - square_filled").transform.position = new Vector3(-7.65f, -2.974842f, 0);
         GameObject.Find("02 - square_filled").transform.localRotation = Quaternion.Euler(0, 0, 0);
         GameObject.Find("02 - square_filled").GetComponent<MoveShape>().rotation = 1;
         GameObject.Find("02 - square_filled").GetComponent<MoveShape>().finish = false;
 
-        GameObject.Find("04 - triangle1_filled").transform.position = new Vector3(-7.299611f, -3.074837f, 0);
+        GameObject.Find("04 - triangle1_filled").transform.position = new Vector3(-4.98f, -3.074837f, 0);
         GameObject.Find("04 - triangle1_filled").transform.localRotation = Quaternion.Euler(0, 0, 0);
         GameObject.Find("04 - triangle1_filled").GetComponent<MoveShape>().rotation = 1;
         GameObject.Find("04 - triangle1_filled").GetComponent<MoveShape>().finish = false;
 
-        GameObject.Find("05 - triangle1_filled").transform.position = new Vector3(-4.199776f, -3.074837f, 0);
+        GameObject.Find("05 - triangle1_filled").transform.position = new Vector3(-1.88f, -3.074837f, 0);
         GameObject.Find("05 - triangle1_filled").transform.localRotation = Quaternion.Euler(0, 0, 0);
         GameObject.Find("05 - triangle1_filled").GetComponent<MoveShape>().rotation = 1;
         GameObject.Find("05 - triangle1_filled").GetComponent<MoveShape>().finish = false;
 
-        GameObject.Find("07 - triangle2_filled").transform.position = new Vector3(-1.999893f, -3.074837f, 0);
+        GameObject.Find("07 - triangle2_filled").transform.position = new Vector3(0.32f, -3.074837f, 0);
         GameObject.Find("07 - triangle2_filled").transform.localRotation = Quaternion.Euler(0, 0, 0);
         GameObject.Find("07 - triangle2_filled").GetComponent<MoveShape>().rotation = 1;
         GameObject.Find("07 - triangle2_filled").GetComponent<MoveShape>().finish = false;
 
-        GameObject.Find("08 - triangle2_filled").transform.position = new Vector3(0f, -3.074837f, 0);
+        GameObject.Find("08 - triangle2_filled").transform.position = new Vector3(2.06f, -3.074837f, 0);
         GameObject.Find("08 - triangle2_filled").transform.localRotation = Quaternion.Euler(0, 0, 0);
         GameObject.Find("08 - triangle2_filled").GetComponent<MoveShape>().rotation = 1;
         GameObject.Find("08 - triangle2_filled").GetComponent<MoveShape>().finish = false;
 
-        GameObject.Find("10 - triangle3_filled").transform.position = new Vector3(1.799904f, -3.224828f, 0);
+        GameObject.Find("10 - triangle3_filled").transform.position = new Vector3(4.33f, -3.224828f, 0);
         GameObject.Find("10 - triangle3_filled").transform.localRotation = Quaternion.Euler(0, 0, 0);
         GameObject.Find("10 - triangle3_filled").GetComponent<MoveShape>().rotation = 1;
         GameObject.Find("10 - triangle3_filled").GetComponent<MoveShape>().finish = false;
 
-        GameObject.Find("12 - paralel_filled").transform.position = new Vector3(4.399765f, -3.474815f, 0);
+        GameObject.Find("12 - paralel_filled").transform.position = new Vector3(6.39f, -3.474815f, 0);
         GameObject.Find("12 - paralel_filled").transform.localRotation = Quaternion.Euler(0, 0, 0);
         GameObject.Find("12 - paralel_filled").GetComponent<MoveShape>().rotation = 1;
         GameObject.Find("12 - paralel_filled").GetComponent<MoveShape>().finish = false;
